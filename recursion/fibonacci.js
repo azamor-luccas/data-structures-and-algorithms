@@ -6,13 +6,13 @@
 // f(n) = f(n-1) + f(n-2)
 // f(1) = 1
 // f(0) = 1
-function recursiveFibonacci(n) { //O(n)
+function recursiveFibonacci(n) { //O(2**n)
   if (n === 0) return 0;
   if (n === 1) return 1;
   return (recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2))
 }
 
-function iteractiveFibonacci(n) { //O(2**n)
+function iteractiveFibonacci(n) { //O(n)
   let fibonacciSequence = [0,1]
   for (let i = 2; i <= n; i++) {
     fibonacciSequence.push(fibonacciSequence[i - 1] + fibonacciSequence[i - 2]);
